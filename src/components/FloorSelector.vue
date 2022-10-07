@@ -12,13 +12,15 @@ const { maps, currentMap, floors, currentFloor, callouts } = storeToRefs(store);
         <select v-model="currentFloor">
             <option v-for="floor in floors">{{ floor.name }}</option>
         </select>
-        <div v-for="callout in callouts">{{ callout }}</div>
     </div>
 </template>
 
 <style scoped>
+label {
+    font-size: 1.5rem;
+}
 select {
     width: 100%;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 </style>

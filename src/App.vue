@@ -1,28 +1,101 @@
 <script setup>
 import MapSelector from "./components/MapSelector.vue";
 import FloorSelector from "./components/FloorSelector.vue";
+import { useMapsStore } from "./stores/maps";
+import { storeToRefs } from "pinia";
+import { computed, ref } from "vue";
+
+const store = useMapsStore();
+const { callouts } = storeToRefs(store);
+
+const actions = ["Go to room", "Fire in room"];
+const currentAction = ref("");
+const currentRoom = ref("");
+
+shuffle(callouts.value);
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+
+        // swap elements array[i] and array[j]
+        // we use "destructuring assignment" syntax to achieve that
+        // you'll find more details about that syntax in later chapters
+        // same can be written as:
+        // let t = array[i]; array[i] = array[j]; array[j] = t
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function generate() {
+    console.log(callouts);
+    if (callouts.value.length === 0) {
+        alert(
+            "No more callouts available. You can choose another map or floor or refresh the app."
+        );
+
+        return;
+    }
+
+    currentAction.value = actions[getRandomInt(2)];
+    currentRoom.value = callouts.value.pop();
+}
 </script>
 
 <template>
     <main>
+        <h1>R6 Training Tool</h1>
         <section class="selector__grid">
             <MapSelector />
             <FloorSelector />
         </section>
 
-        <button>Get room</button>
+        <button @click="generate" class="get-room">Generate</button>
 
         <section>
-            <p>Action</p>
-            <p>Room name</p>
+            <p class="action-text">{{ currentAction }}</p>
+            <p class="room-name">{{ currentRoom }}</p>
         </section>
     </main>
 </template>
 
 <style scoped>
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
 .selector__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.get-room {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 15px 30px;
+}
+.action-text {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.room-name {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .selector__grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 </style>
