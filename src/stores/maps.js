@@ -5,6 +5,8 @@ import clubhouse from "../maps/clubhouse";
 import oregon from "../maps/oregon";
 import themePark from "../maps/theme-park";
 import skyscraper from "../maps/skyscraper";
+import coastline from "../maps/coastline";
+
 export const useMapsStore = defineStore("maps", () => {
     const maps = ref([]);
     const currentMap = ref("");
@@ -42,9 +44,10 @@ export const useMapsStore = defineStore("maps", () => {
 
     addMap(bank);
     addMap(clubhouse);
+    addMap(coastline);
     addMap(oregon);
-    addMap(themePark);
     addMap(skyscraper);
+    addMap(themePark);
 
     return {
         maps,
