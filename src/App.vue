@@ -32,7 +32,6 @@ function getRandomInt(max) {
 }
 
 function generate() {
-    console.log(callouts);
     if (callouts.value.length === 0) {
         alert(
             "No more callouts available. You can choose another map or floor or refresh the app."
@@ -65,7 +64,7 @@ function generate() {
 
 <style scoped>
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 .selector__grid {
@@ -74,7 +73,7 @@ h1 {
 }
 
 .get-room {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -82,13 +81,13 @@ h1 {
     padding: 15px 30px;
 }
 .action-text {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .room-name {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 0px;
 }

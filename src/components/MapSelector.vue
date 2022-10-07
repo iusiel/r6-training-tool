@@ -17,10 +17,10 @@ const { resetFloorValue } = store;
 
 <style scoped>
 label {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 select {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 </style>
