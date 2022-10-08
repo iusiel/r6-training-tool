@@ -1,10 +1,10 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+import Swal from "sweetalert2";
 import MapSelector from "./components/MapSelector.vue";
 import FloorSelector from "./components/FloorSelector.vue";
 import { useMapsStore } from "./stores/maps";
-import Swal from "sweetalert2";
 
 const store = useMapsStore();
 const { callouts } = storeToRefs(store);
