@@ -1,0 +1,72 @@
+const kafe = {
+    mapName: "Kafe Dostoyevsky",
+    floors: [
+        {
+            name: "1st Floor",
+            callouts: [
+                "Bakery",
+                "Small Bakery",
+                "1F Red Hall",
+                "Red Stairs",
+                "Kitchen",
+                "Prep",
+                "Kitchen Service",
+                "Freezer",
+                "Coats",
+                "Reception",
+                "Bar",
+                "Dining",
+                "VIP",
+                "Freezer Hall",
+                "Garage",
+                "White Stairs Bottom",
+                "Pillar Stairs",
+            ],
+        },
+
+        {
+            name: "2nd Floor",
+            callouts: [
+                "Pillars Entrance",
+                "Reading",
+                "Pillars",
+                "Pillars Stairs",
+                "Mining Chairs",
+                "Mining",
+                "2F Red Hall",
+                "Red Stairs",
+                "90",
+                "Laundry 90",
+                "Laundry",
+                "Mid White Stairs",
+                "Fireplace",
+                "Train",
+                "Fireplace Hall",
+                "White Stairs Bottom",
+                "Garage",
+            ],
+        },
+
+        {
+            name: "3rd Floor",
+            callouts: [
+                "Top Red Stairs",
+                "Piano",
+                "Pixel",
+                "White Hall",
+                "Toilet",
+                "Cigar",
+                "New Hatch",
+                "3F Bar",
+                "Bar Stock",
+                "3F Freezer",
+                "Top White Stairs",
+                "Drywall",
+                "Cocktail",
+                "Cocktail Balcony",
+            ],
+        },
+    ],
+};
+
+export default kafe;

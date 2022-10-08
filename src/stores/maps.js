@@ -1,60 +1,62 @@
-import { ref, computed } from "vue";
-import { defineStore } from "pinia";
-import bank from "../maps/bank";
-import clubhouse from "../maps/clubhouse";
-import oregon from "../maps/oregon";
-import themePark from "../maps/theme-park";
-import skyscraper from "../maps/skyscraper";
-import coastline from "../maps/coastline";
+import { ref, computed } from 'vue';
+import { defineStore } from 'pinia';
+import bank from '../maps/bank';
+import clubhouse from '../maps/clubhouse';
+import oregon from '../maps/oregon';
+import themePark from '../maps/theme-park';
+import skyscraper from '../maps/skyscraper';
+import coastline from '../maps/coastline';
+import kafe from '../maps/kafe';
 
-export const useMapsStore = defineStore("maps", () => {
-    const maps = ref([]);
-    const currentMap = ref("");
-    const currentFloor = ref("");
+export const useMapsStore = defineStore('maps', () => {
+  const maps = ref([]);
+  const currentMap = ref('');
+  const currentFloor = ref('');
 
-    const doubleCount = computed(() => count.value * 2);
+  const doubleCount = computed(() => count.value * 2);
 
-    const floors = computed(() => {
-        const filteredMap = maps.value.filter(
-            (map) => map.mapName === currentMap.value
-        );
+  const floors = computed(() => {
+    const filteredMap = maps.value.filter(
+      (map) => map.mapName === currentMap.value,
+    );
 
-        if (filteredMap.length === 0) return [];
+    if (filteredMap.length === 0) return [];
 
-        return filteredMap.pop().floors;
-    });
+    return filteredMap.pop().floors;
+  });
 
-    const callouts = computed(() => {
-        const filteredFloor = floors.value.filter(
-            (floor) => floor.name === currentFloor.value
-        );
+  const callouts = computed(() => {
+    const filteredFloor = floors.value.filter(
+      (floor) => floor.name === currentFloor.value,
+    );
 
-        if (filteredFloor.length === 0) return [];
+    if (filteredFloor.length === 0) return [];
 
-        return filteredFloor.pop().callouts;
-    });
+    return filteredFloor.pop().callouts;
+  });
 
-    function addMap(map) {
-        maps.value.push(map);
-    }
+  function addMap(map) {
+    maps.value.push(map);
+  }
 
-    function resetFloorValue() {
-        currentFloor.value = "";
-    }
+  function resetFloorValue() {
+    currentFloor.value = '';
+  }
 
-    addMap(bank);
-    addMap(clubhouse);
-    addMap(coastline);
-    addMap(oregon);
-    addMap(skyscraper);
-    addMap(themePark);
+  addMap(bank);
+  addMap(clubhouse);
+  addMap(coastline);
+  addMap(kafe);
+  addMap(oregon);
+  addMap(skyscraper);
+  addMap(themePark);
 
-    return {
-        maps,
-        currentMap,
-        floors,
-        currentFloor,
-        callouts,
-        resetFloorValue,
-    };
+  return {
+    maps,
+    currentMap,
+    floors,
+    currentFloor,
+    callouts,
+    resetFloorValue,
+  };
 });
