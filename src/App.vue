@@ -4,6 +4,7 @@ import { ref } from "vue";
 import MapSelector from "./components/MapSelector.vue";
 import FloorSelector from "./components/FloorSelector.vue";
 import { useMapsStore } from "./stores/maps";
+import Swal from "sweetalert2";
 
 const store = useMapsStore();
 const { callouts } = storeToRefs(store);
@@ -32,9 +33,11 @@ function getRandomInt(max) {
 
 function generate() {
     if (callouts.value.length === 0) {
-        // alert(
-        //   'No more callouts available. You can choose another map or floor or refresh the app.',
-        // );
+        Swal.fire(
+            "",
+            "No more callouts available. You can choose another map or floor or refresh the app.",
+            "error"
+        );
 
         return;
     }
