@@ -1,6 +1,6 @@
 <script setup>
-import { useMapsStore } from "../stores/maps";
 import { storeToRefs } from "pinia";
+import { useMapsStore } from "../stores/maps";
 
 const store = useMapsStore();
 const { maps, currentMap } = storeToRefs(store);
@@ -10,7 +10,9 @@ const { resetFloorValue } = store;
     <div>
         <label for="mapSelect">Map</label>
         <select v-model="currentMap" @change="resetFloorValue" id="mapSelect">
-            <option v-for="map in maps">{{ map.mapName }}</option>
+            <option v-for="(map, index) in maps" :key="index">
+                {{ map.mapName }}
+            </option>
         </select>
     </div>
 </template>

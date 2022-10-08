@@ -1,9 +1,9 @@
 <script setup>
+import { storeToRefs } from "pinia";
+import { ref } from "vue";
 import MapSelector from "./components/MapSelector.vue";
 import FloorSelector from "./components/FloorSelector.vue";
 import { useMapsStore } from "./stores/maps";
-import { storeToRefs } from "pinia";
-import { computed, ref } from "vue";
 
 const store = useMapsStore();
 const { callouts } = storeToRefs(store);
@@ -12,17 +12,16 @@ const actions = ["Go to room", "Fire in room"];
 const currentAction = ref("");
 const currentRoom = ref("");
 
-shuffle(callouts.value);
-
 function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+    for (let i = array.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
 
         // swap elements array[i] and array[j]
         // we use "destructuring assignment" syntax to achieve that
         // you'll find more details about that syntax in later chapters
         // same can be written as:
         // let t = array[i]; array[i] = array[j]; array[j] = t
+        // eslint-disable-next-line no-param-reassign
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
@@ -33,12 +32,14 @@ function getRandomInt(max) {
 
 function generate() {
     if (callouts.value.length === 0) {
-        alert(
-            "No more callouts available. You can choose another map or floor or refresh the app."
-        );
+        // alert(
+        //   'No more callouts available. You can choose another map or floor or refresh the app.',
+        // );
 
         return;
     }
+
+    shuffle(callouts.value);
 
     currentAction.value = actions[getRandomInt(2)];
     currentRoom.value = callouts.value.pop();

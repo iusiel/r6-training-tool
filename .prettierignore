@@ -1,12 +1,6 @@
-# for laravel
-bootstrap
-public
+# for vue js project
+dist
 githook
 linters
 node_modules
-vendor
-resources/plugins
-composer.json
-composer.lock
 package.json
-storage
