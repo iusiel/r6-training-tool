@@ -7,6 +7,7 @@ import themePark from "../maps/theme-park";
 import skyscraper from "../maps/skyscraper";
 import coastline from "../maps/coastline";
 import kafe from "../maps/kafe";
+import chalet from "../maps/chalet";
 
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
@@ -43,6 +44,7 @@ export const useMapsStore = defineStore("maps", () => {
     }
 
     addMap(bank);
+    addMap(chalet);
     addMap(clubhouse);
     addMap(coastline);
     addMap(kafe);
