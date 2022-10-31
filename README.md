@@ -1,35 +1,26 @@
 # r6-training-tool
 
-This template should help get you started developing with Vue 3 in Vite.
+Simple tool for training with map callouts.
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+-   Vue.JS
+-   Pinia
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Clone the repository.
+1. After cloning the repository, run `yarn install` or `npm install`
 
-## Project Setup
+## How to use
 
-```sh
-npm install
-```
+1. Run `npm run dev` to run in development mode. Default url is http://localhostz/r6-training-tool/
 
-### Compile and Hot-Reload for Development
+## File and folder structure
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+-   src/assets - contains public assets like images and stylesheets
+-   src/components - vue components
+-   src/maps - contains map data
+-   src/stores - store files used in conjuction with Pinia
+-   App.vue - main component
+-   main.js - main javascript file
