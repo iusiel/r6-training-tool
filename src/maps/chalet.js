@@ -4,7 +4,7 @@ const chalet = {
         {
             name: "Basement",
             callouts: [
-                "Garage Closet",
+                "Garage Closet / Main Garage Entrance",
                 "Main Garage",
                 "Garage Wall",
                 "Wine Hall",
@@ -19,9 +19,9 @@ const chalet = {
                 "Blue 90",
                 "Blue Hall",
                 "Blue Stairs",
-                "Landing",
+                "Landing / Gaming Room Hallway",
                 "Snow Garage",
-                "Connector",
+                "Connector / Storage",
                 "Garage Stairs",
                 "Lobby",
                 "Snow mobiles",
