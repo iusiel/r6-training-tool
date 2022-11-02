@@ -55,7 +55,7 @@ const kafe = {
                 "Pixel / Cigar Lounge to White Hall",
                 "White Hall",
                 "Toilet",
-                "Cigar",
+                "Cigar / Cigar Shop",
                 "New Hatch / Cigar Balcony",
                 "3F Bar",
                 "Bar Stock",
