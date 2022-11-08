@@ -9,6 +9,7 @@ import coastline from "../maps/coastline";
 import kafe from "../maps/kafe";
 import chalet from "../maps/chalet";
 import border from "../maps/border";
+import emeraldPlains from "../maps/emerald-plains";
 
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
@@ -49,6 +50,7 @@ export const useMapsStore = defineStore("maps", () => {
     addMap(chalet);
     addMap(clubhouse);
     addMap(coastline);
+    addMap(emeraldPlains);
     addMap(kafe);
     addMap(oregon);
     addMap(skyscraper);
