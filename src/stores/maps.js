@@ -10,7 +10,7 @@ import kafe from "../maps/kafe";
 import chalet from "../maps/chalet";
 import border from "../maps/border";
 import emeraldPlains from "../maps/emerald-plains";
-
+import outback from "../maps/outback";
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
     const maps = ref([]);
@@ -53,6 +53,7 @@ export const useMapsStore = defineStore("maps", () => {
     addMap(emeraldPlains);
     addMap(kafe);
     addMap(oregon);
+    addMap(outback);
     addMap(skyscraper);
     addMap(themePark);
 

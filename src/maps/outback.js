@@ -1,0 +1,56 @@
+const outback = {
+    mapName: "Outback",
+    floors: [
+        {
+            name: "1st Floor",
+            callouts: [
+                "Yellow Stairs",
+                "Yellow",
+                "Red",
+                "Green",
+                "Bathroom",
+                "Reptile Closet",
+                "Reptile",
+                "Loading",
+                "Shark Stairs",
+                "Restaurant",
+                "Kitchen Hall",
+                "Lobby",
+                "Kitchen",
+                "Reception",
+                "Shop",
+                "Waiting",
+                "Bike",
+                "Garage Stairs",
+                "Garage",
+            ],
+        },
+
+        {
+            name: "2nd Floor",
+            callouts: [
+                "Yellow Stairs",
+                "Motel Hallway",
+                "Dorms",
+                "Laundry",
+                "Showers",
+                "Connector",
+                "Piano",
+                "Gaming",
+                "Terrace",
+                "Bull",
+                "Shark",
+                "Shark Stairs",
+                "Party Hall",
+                "Party",
+                "Office",
+                "Supplies",
+                "Dorms",
+                "Garage Stairs",
+                "Lounge",
+            ],
+        },
+    ],
+};
+
+export default outback;
