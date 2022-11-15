@@ -12,6 +12,7 @@ import border from "../maps/border";
 import emeraldPlains from "../maps/emerald-plains";
 import outback from "../maps/outback";
 import consulate from "../maps/consulate";
+import villa from "../maps/villa";
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
     const maps = ref([]);
@@ -58,6 +59,7 @@ export const useMapsStore = defineStore("maps", () => {
     addMap(outback);
     addMap(skyscraper);
     addMap(themePark);
+    addMap(villa);
 
     return {
         maps,
