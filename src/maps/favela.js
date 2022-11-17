@@ -1,0 +1,55 @@
+const favela = {
+    mapName: "Favela",
+    floors: [
+        {
+            name: "1st Floor",
+            callouts: [
+                "Pillar",
+                "Yellow Stairs",
+                "Top Yellow",
+                "Yellow Hole",
+                "Green",
+                "Green Toilet",
+                "Foosball",
+                "Blue",
+                "Blue Bed",
+                "Blue Toilet",
+                "Pink",
+                "Pink Kitchen",
+                "Blue Kitchen",
+                "Pink Hall",
+                "Solar",
+                "Laundry Hall",
+                "Trash Bottom",
+                "Trash Stairs",
+            ],
+        },
+
+        {
+            name: "2nd Floor and 3rd Floor",
+            callouts: [
+                "Pillar",
+                "Yellow Stairs",
+                "Top Yellow",
+                "Bunks",
+                "Office",
+                "Server",
+                "Hacker",
+                "Server Hall",
+                "Trash Lips",
+                "Trash Stairs",
+                "Trash Bottom",
+                "Storage",
+                "Armory",
+                "Armory Breach",
+                "Red",
+                "Red Stairs",
+                "Roof",
+                "Attic",
+                "Electrical",
+            ],
+        },
+    ],
+};
+
+export default favela;

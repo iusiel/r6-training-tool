@@ -13,6 +13,8 @@ import emeraldPlains from "../maps/emerald-plains";
 import outback from "../maps/outback";
 import consulate from "../maps/consulate";
 import villa from "../maps/villa";
+import favela from "../maps/favela";
+import kanal from "../maps/kanal";
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
     const maps = ref([]);
@@ -54,7 +56,9 @@ export const useMapsStore = defineStore("maps", () => {
     addMap(coastline);
     addMap(consulate);
     addMap(emeraldPlains);
+    addMap(favela);
     addMap(kafe);
+    addMap(kanal);
     addMap(oregon);
     addMap(outback);
     addMap(skyscraper);
