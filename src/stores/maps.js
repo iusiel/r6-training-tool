@@ -15,6 +15,7 @@ import consulate from "../maps/consulate";
 import villa from "../maps/villa";
 import favela from "../maps/favela";
 import kanal from "../maps/kanal";
+import stadium from "../maps/stadium";
 // eslint-disable-next-line import/prefer-default-export
 export const useMapsStore = defineStore("maps", () => {
     const maps = ref([]);
@@ -62,6 +63,7 @@ export const useMapsStore = defineStore("maps", () => {
     addMap(oregon);
     addMap(outback);
     addMap(skyscraper);
+    addMap(stadium);
     addMap(themePark);
     addMap(villa);
 
