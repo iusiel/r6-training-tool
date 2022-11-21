@@ -14,7 +14,7 @@ Simple tool for training with map callouts.
 
 ## How to use
 
-1. Run `npm run dev` to run in development mode. Default url is http://localhostz/r6-training-tool/
+1. Run `npm run dev` to run in development mode. Default url is http://localhost/r6-training-tool/
 
 ## File and folder structure
 
