@@ -2,7 +2,7 @@ const consulate = {
     mapName: "Consulate",
     floors: [
         {
-            name: "Basement ",
+            name: "Basement",
             callouts: [
                 "White Van / Side",
                 "Pillar",
