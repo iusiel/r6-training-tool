@@ -14,8 +14,6 @@ const stadium = {
                 "Tellers",
                 "Tellers Entrance",
                 "Toilets",
-                "Delivery",
-                "Supply",
                 "Kitchen Hall",
                 "Kitchen",
                 "Sunrise Hall",
